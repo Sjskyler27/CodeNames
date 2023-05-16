@@ -1,0 +1,20 @@
+/* COLOR PALLETTE (From: https://coolors.co) */
+/* RED = "#C1292E"
+# RED = "#e83151"
+BLUE = "#235789"
+# BLUE = "#387780"
+YELLOW = "#F1D302"
+# YELLOW = "#d2cca1"
+WHITE = "#FDFFFC"
+# OFFWHITE = "#dbd4d3"
+BLACK = "#161925"
+# BLACK = "#757780"
+CARD_WHITE = "#dbd4d3" */
+
+header{
+    color: #C1292E;
+}
+
+body{
+    cursor: url('/images/cursor3.png'),pointer;
+}
