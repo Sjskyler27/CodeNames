@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "vite": "^4.3.6"
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "vite build --emptyOutDir",
+    "preview": "vite preview"
+  }
+}
