@@ -9,11 +9,25 @@ export class Solution{
     //Solution is a json object that contains the code, first player, and word values
     async getSolution() {
         console.log("Getting solution...");
-        this.solution = Backup[1]; //temporary will be getting from api
-        //console.log(this.solution);
-        // temp wordlist
-        this.wordList = this.solution.words;
-        //console.log(this.wordList);
+
+        try{
+            const response = await fetch(`https://codenamesdb.onrender.com/9876`);
+            // const response = await fetch(`http://localhost:8080/${2468}`);
+            const data = await convertToJson(response);
+            this.solution = data;
+            this.wordList = this.solution.words;  
+        }catch(e){
+            console.log('no good ' +e);
+            const randomType = Math.floor(Math.random() * Backup.length);
+            console.log(randomType);
+            this.solution = Backup[randomType]; //temporary will be getting from api
+            //console.log(this.solution);
+            // temp wordlist
+            this.wordList = this.solution.words;
+            window.alert("The database does not seem to be working! But don't worry you can play a few rounds without it.");
+            //console.log(this.wordList);
+        }
+
     }
     
     // going to move this to the back end
@@ -74,3 +88,11 @@ export class Solution{
         return Player2;
     }
 }
+
+function convertToJson(res) {
+    if (res.ok) {
+      return res.json();
+    } else {
+      throw new Error("Bad Response");
+    }
+  }

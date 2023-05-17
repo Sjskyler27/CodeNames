@@ -44,28 +44,24 @@ export class ColorChange{
     }
 
     // initialize colorChange event, wait for a card to be clicked
-    async init(){
-
-        //console.log(this.list);
-
-        // loop through each ID and creaete a event for them
-        // I should be able to make this into a for loop, but since solution has more than just these arrays...
+    async init() {
+        await new Promise(resolve => setTimeout(resolve, 500)); // Delay for .5 second to really ensure that everything is ready
+      
         this.solution.Player1.forEach(id => {
-            let element = document.getElementById(id);
-            element.addEventListener('click', () => this.change(id, element)); 
+          let element = document.getElementById(id);
+          element.addEventListener('click', () => this.change(id, element)); 
         });
         this.solution.Player2.forEach(id => {
-            let element = document.getElementById(id);
-            element.addEventListener('click', () => this.change(id, element)); 
+          let element = document.getElementById(id);
+          element.addEventListener('click', () => this.change(id, element)); 
         });
         this.solution.Yellow.forEach(id => {
-            let element = document.getElementById(id);
-            element.addEventListener('click', () => this.change(id, element)); 
+          let element = document.getElementById(id);
+          element.addEventListener('click', () => this.change(id, element)); 
         });
         this.solution.Black.forEach(id => {
-            let element = document.getElementById(id);
-            element.addEventListener('click', () => this.change(id, element)); 
+          let element = document.getElementById(id);
+          element.addEventListener('click', () => this.change(id, element)); 
         });
-        
+      }
     }
-}
