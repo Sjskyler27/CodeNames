@@ -9,13 +9,10 @@ export class Solution{
     //Solution is a json object that contains the code, first player, and word values
     async getSolution() {
         console.log("Getting solution...");
-        this.solution = Backup[0]; //temporary will be getting from api
+        this.solution = Backup[1]; //temporary will be getting from api
         //console.log(this.solution);
         // temp wordlist
-        this.wordList = ["tramp", "fuse", "mouse", "apple", "tree", "sun", "car", "book",
-        "glory", "animal", "tray", "house", "ball", "flower", "water", "sky",
-        "green", "torque", "red", "moon", "music", "cloud", "fish", "orange",
-        "breath"];
+        this.wordList = this.solution.words;
         //console.log(this.wordList);
     }
     
