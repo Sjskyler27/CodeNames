@@ -1,0 +1,36 @@
+OVERVIEW
+The goal of my project is to recreate the classic board game code names. This is a classic board game where you have a grid of words, and two players have the solution to that grid. The other players will attempt to correctly guess their teams words based on the hints that the code giver will provide. By creating this game I will be able to automate the set up, and I will be able to provide a way that enable people to play this game across the country from each other. 
+HOW ITS USED
+Two to three devices will be necessary for playing this game, one user will que up the game on the tv using the internet. when the site pulls up they can click play again, it will then generate a new list of words along with a code. The TV will be used by those playing to guess the words, the driver can click on the words to reveal the color.
+the code givers will share a phone, or each use their own. they will go to the website and click on solution, it will reveal the solution to the most recently created game, if it is not he same, they are able to type the code or id of the game that is up on the tv in order to reveal the solution to that game. 
+
+MODULES
+utils.mjs: holds all of the utilitarian functions I will need.
+gamePage.mjs: display cards on page. generate new game when play again is clicked. display the color of a card when clicked. 
+solutions.mjs: display cards on page. make all the cards the correct color when loaded. generate cards based on code if entered.
+
+FUNCTIONS
+displayCards: receive json as an input and out put a html template based upon it. 
+checkColor: receives a word as input and checks it against the current game, changes the css of the card to the corresponding color.
+showSolution: calls check color for every card on the  page.
+
+DATA SOURCE
+The api I am using has two 2 requests:
+get new words 
+get words by code/id
+
+Get new words will be called when you hit Play Again, a new list will be generated and added to the database. 
+If someone clicks on solution on their phone they will most likely see what the big screen just generated, but if they don't then they just need to type in the code/number they see  on the tv and it will populate there screen with the words similar to the big screen. this way new words are generated every time, but you can still access past generations. 
+WIREFRAMES
+ 
+
+COLORS AND TYPOGRAPHY
+https://fonts.googleapis.com/css2?family=Koulen&family=Staatliches&display=swap 
+COLORS:
+RED = "#C1292E"
+BLUE = "#235789"
+YELLOW = "#F1D302"
+WHITE = "#FDFFFC"
+BLACK = "#161925"
+CARD_WHITE = "#dbd4d3"
+

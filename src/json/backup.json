@@ -1,0 +1,8 @@
+[{
+    "firstPlayer": "red",
+    "Player1": ["tramp", "fuse", "mouse", "apple", "tree", "sun", "car", "book"],
+    "Player2": ["glory", "animal", "tray", "house", "ball", "flower", "water", "sky"],
+    "Yellow": ["green", "torque", "red", "moon", "music", "cloud", "fish", "orange"],
+    "Black": ["breath"]
+  }
+]
