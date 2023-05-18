@@ -1,5 +1,7 @@
-import { addToggle, loadHeader } from "./utils";
+import { addToggle, colorHeader, loadHeader } from "./utils";
 
-await loadHeader();
-
-addToggle();
+(async () => {
+  await loadHeader();
+  addToggle();
+  colorHeader();
+})();
