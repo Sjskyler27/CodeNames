@@ -10,3 +10,14 @@ export function getParam(type){
 export function insertCode(code){
     document.getElementById("gameCode").value = code;
 }
+
+export async function autoClick(){
+    console.log("clicking cards");
+    await new Promise(resolve => setTimeout(resolve, 500)); // add delay for suspense... and to make it work
+    const cards = document.getElementsByClassName('card'); // Get all the card elements
+    // Loop through each card element
+    for (const card of cards) {
+        await new Promise(resolve => setTimeout(resolve, 50)); // add delay for trailing effect
+        card.click(); // Trigger a click event on the card
+    }
+}

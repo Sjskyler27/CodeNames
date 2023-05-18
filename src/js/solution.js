@@ -11,23 +11,23 @@ export class Solution{
     async getSolution() {
         console.log("Getting solution...");
         const code = getParam("code");
-        try{
-            const response = await fetch(`https://codenamesdb.onrender.com/${code}`);
-            insertCode(code);
-            // const response = await fetch(`http://localhost:8080/${2468}`);
-            const data = await convertToJson(response);
-            this.solution = data;
-            this.wordList = this.solution.words;  
-        }catch(e){
-            console.log('no good ' +e);
-            const randomType = Math.floor(Math.random() * Backup.length);
-            console.log(randomType);
-            this.solution = Backup[randomType]; //temporary will be getting from api
-            //console.log(this.solution);
-            // temp wordlist
+        insertCode(code);
+        if (code<100){
+            this.solution = Backup[code];
             this.wordList = this.solution.words;
-            window.alert("The database does not seem to be working! But don't worry you can play a few rounds without it.");
-            //console.log(this.wordList);
+        }else{
+
+            try{
+                const response = await fetch(`https://codenamesdb.onrender.com/${code}`);
+                // const response = await fetch(`http://localhost:8080/${2468}`);
+                const data = await convertToJson(response);
+                this.solution = data;
+                this.wordList = this.solution.words;  
+            }catch(e){
+                console.log('no good ' +e);
+                window.alert("The database does not seem to be working! But don't worry you can play a few rounds without it. Just use codes 0 - 99 to play some premade maps");
+                document.getElementById("gameCode").value = "0-99";
+            }
         }
 
     }
