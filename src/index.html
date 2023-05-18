@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Game Home Page</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="module" src="../js/main.js"></script>
+  <title>CodeNames | Home </title>
 </head>
 <body>
-  <h1>Welcome to the Game</h1>
+    <header>
+        <h1>CodeNames </h1>
+        <div class="header-icons">
+          <a href="/" class="home-button">
+            <i class="material-icons">home</i>
+          </a>
+          <label class="toggle-switch">
+            <input type="checkbox" id="color-toggle">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </header>
+      <div id = "nav" class = "navWrapper" style ="text-align: center;">
 
-  <h2>Instructions</h2>
-  <p>Click <a href="instructions.html">here</a> to view the game instructions.</p>
 
-  <h2>Create New Game</h2>
-  <p>Click <a href="newgame.html">here</a> to create a new game.</p>
-
-  <h2>Join Game</h2>
-  <form action="game.html" method="GET">
-    <label for="gameCode">Enter Game Code:</label>
-    <input type="text" id="gameCode" name="code" required>
-    <button type="submit">Join Game</button>
-  </form>
+        <form action="/game/game.html" method="GET">
+          <input type="text" id="gameCode" name="code" required>
+          <button type="submit">Join Game</button>
+        </form>
+        <a href="instructions.html">Instructions</a>
+      
+        <a href="newgame.html">New Game</a>
+      
+      </div>
 </body>
 </html>

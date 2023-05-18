@@ -4,18 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/style.css" /> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="module" src="../js/game.js"></script>
-    <title>Document</title>
+    <title>CodeNames | Game</title>
 </head>
 <body>
-    <header id = main-header>
-        <h1 id="title">Code Names</h1>
+    <header>
+        <h1>CodeNames </h1>
+        <div class="header-icons">
+          <a href="/" class="home-button">
+            <i class="material-icons">home</i>
+          </a>
+          <label class="toggle-switch">
+            <input type="checkbox" id="color-toggle">
+            <span class="slider round"></span>
+          </label>
+        </div>
     </header>
-    <div id = "wordGrid">
+    <div id = "nav" class = "navWrapper" style ="text-align: center;">
+
+
+        <form action="/game/game.html" method="GET">
+          <input type="text" id="gameCode" name="code" required>
+          <button type="submit">Join Game</button>
+        </form>  
     </div>
-    <div id = "nav" class = "navWrapper">
-        <a href="./solution/solution.html">SOLUTION</a>
+    <div id = "wordGrid">
+        <br><p></p>
+        <div class = "loading">
+            <p >loading...</p>
+        </div>
+        <br><br>
+    </div>
+    <div id = "nav" class = "navWrapper" style = "text-align: right;">
+        <a id = "solution_button" href="../solution/solution.html">Solution</a>
+        <a href="newgame.html">New Game</a>
     </div>
 
 </body>
