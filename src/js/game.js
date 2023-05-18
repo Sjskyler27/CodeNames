@@ -3,9 +3,9 @@ import { ColorChange } from "./colorChange.js";
 import { displayWords } from "./wordTemplate.js";
 import { getParam, insertCode, loadHeader,addToggle, colorHeader } from "./utils.js";
 
-await loadHeader();
-addToggle();
 async function init(){
+  await loadHeader();
+  addToggle();
     const solution = new Solution();
     await solution.getSolution();
     
