@@ -87,12 +87,12 @@ input:checked + .slider:before {
 }
 body {
     background-color: var(--white);
-    transition: background-color 0.5s ease;
+    transition: background-color 0.3s ease;
 }
 
-.dark-mode {
+body.dark-mode {
     background-color: var(--black);
-    color: var(--white);
+    /* color: var(--white); */
 }
 
 #wordGrid {
@@ -227,4 +227,8 @@ body {
     text-decoration: underline;
   }
   
+  .instructions.dark-mode {
+    color: #FDFFFC;
+    background-color: #555;
+  }
   
