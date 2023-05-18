@@ -1,5 +1,6 @@
 //This module gets the solution from the back end, it is ablt to return the entire solution json, and the list of words.
 import Backup from "../json/backup.json";
+import { insertCode, getParam } from "./utils";
 export class Solution{
     constructor(){
         this.solution;
@@ -9,9 +10,10 @@ export class Solution{
     //Solution is a json object that contains the code, first player, and word values
     async getSolution() {
         console.log("Getting solution...");
-
+        const code = getParam("code");
         try{
-            const response = await fetch(`https://codenamesdb.onrender.com/9876`);
+            const response = await fetch(`https://codenamesdb.onrender.com/${code}`);
+            insertCode(code);
             // const response = await fetch(`http://localhost:8080/${2468}`);
             const data = await convertToJson(response);
             this.solution = data;

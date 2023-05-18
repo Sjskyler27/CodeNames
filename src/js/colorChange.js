@@ -1,4 +1,12 @@
 // the color change class requires the list of words to be changed, as well as the solution.
+// :root {
+//     --red: #C1292E;
+//     --blue: #235789;
+//     --yellow: #F1D302;
+//     --white: #FDFFFC;
+//     --black: #161925;
+//     --card-white: #dbd4d3;
+//   }
 export class ColorChange{
     constructor(solution, list){
         this.solution = solution
@@ -10,7 +18,7 @@ export class ColorChange{
         // check if the id passed matches a word in a given list and return its color.
         if(this.solution.Black.indexOf(id)>=0){
             console.log("changing to black");
-            element.style.backgroundColor = '#161925';
+            element.style.backgroundColor = 'black';
             element.style.color = 'white';
         }
         if(this.solution.Yellow.indexOf(id)>=0){
