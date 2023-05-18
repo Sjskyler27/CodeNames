@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/style.css" />
-    <script type="module" src="/js/main.js"></script>
-    <title>Document</title>
+  <title>Game Home Page</title>
 </head>
 <body>
-    <header id = main-header>
-        <h1 id="title">Code Names</h1>
-    </header>
-    <div id = "wordGrid">
-    </div>
-    <div id = "nav" class = "navWrapper">
-        <a href="./solution/solution.html">SOLUTION</a>
-    </div>
+  <h1>Welcome to the Game</h1>
 
+  <h2>Instructions</h2>
+  <p>Click <a href="instructions.html">here</a> to view the game instructions.</p>
+
+  <h2>Create New Game</h2>
+  <p>Click <a href="newgame.html">here</a> to create a new game.</p>
+
+  <h2>Join Game</h2>
+  <form action="game.html" method="GET">
+    <label for="gameCode">Enter Game Code:</label>
+    <input type="text" id="gameCode" name="code" required>
+    <button type="submit">Join Game</button>
+  </form>
 </body>
 </html>
