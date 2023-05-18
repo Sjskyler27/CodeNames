@@ -84,9 +84,33 @@ export async function loadHeader(){
     
     renderWithTemplate(headerTemplate, headerElement);
   }
-export async function addToggle(){
+  export async function addToggle() {
     const colorToggle = document.getElementById('color-toggle');
+  
+    // Retrieve the saved color mode from localStorage, if available
+    const savedColorMode = localStorage.getItem('colorMode');
+    const elements = document.querySelectorAll('*');
+    
+    if (savedColorMode === 'dark-mode') {
+      elements.forEach(element => {
+        element.classList.toggle('dark-mode');
+      });
+      colorToggle.checked = true;
+    }
+  
+    // Listen for changes in the color toggle
     colorToggle.addEventListener('change', function() {
-    document.body.classList.toggle('dark-mode');
+      if (colorToggle.checked) {
+        elements.forEach(element => {
+          element.classList.toggle('dark-mode');
+        });
+        localStorage.setItem('colorMode', 'dark-mode');
+      } else {
+        elements.forEach(element => {
+          element.classList.toggle('dark-mode');
+        });
+        localStorage.setItem('colorMode', 'light-mode');
+      }
     });
-}
+  }
+  
