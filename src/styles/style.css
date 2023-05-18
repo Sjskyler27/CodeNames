@@ -8,7 +8,7 @@
     --card-white: #dbd4d3;
 }
 
-html {
+html{
 /* background-color: var(--black); */
 cursor: url('/images/cursor3.png'), pointer;
 }
@@ -20,6 +20,7 @@ header {
     font-size: 1.99em;
     font-family: 'Staatliches', sans-serif;
     margin: 0;
+    height: 75px;
 }
 
 .header-icons {

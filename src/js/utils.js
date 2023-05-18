@@ -11,6 +11,25 @@ export function insertCode(code){
     document.getElementById("gameCode").value = code;
 }
 
+export function colorHeader(firstPlayer){
+  let header = document.getElementById("first_player");
+  if(firstPlayer){
+
+    if(firstPlayer == "red"){
+      header.style.color = "#C1292E";
+    }else{
+      header.style.color = "#235789";
+    }
+  }else{
+    const colors = ["#235789","#F1D302","#161925","#C1292E"];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  
+    header.style.color = randomColor; // Set the text color to the randomly selected color
+  }
+
+
+}
+
 export async function autoClick(){
     console.log("clicking cards");
     await new Promise(resolve => setTimeout(resolve, 500)); // add delay for suspense... and to make it work
