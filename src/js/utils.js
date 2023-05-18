@@ -21,7 +21,7 @@ export function colorHeader(firstPlayer){
       header.style.color = "#235789";
     }
   }else{
-    const colors = ["#235789","#F1D302","#161925","#C1292E"];
+    const colors = ["#235789","#F1D302","#C1292E"];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
   
     header.style.color = randomColor; // Set the text color to the randomly selected color
