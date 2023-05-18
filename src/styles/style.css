@@ -20,7 +20,7 @@ header {
     font-size: 1.99em;
     font-family: 'Staatliches', sans-serif;
     margin: 0;
-    height: 75px;
+    height: 70px;
 }
 
 .header-icons {
@@ -197,4 +197,34 @@ body {
     border-color: var(--red);
     cursor: url('/images/cursor3.png'), pointer;
 }
+.instructions {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .instructions p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  .instructions h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .instructions a {
+    color: #0366d6;
+    text-decoration: none;
+  }
+  
+  .instructions a:hover {
+    text-decoration: underline;
+  }
+  
   
