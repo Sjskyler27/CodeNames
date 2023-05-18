@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/style.css" /> 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="module" src="../js/game.js"></script>
+    <script type="module" src="../js/answer.js"></script>
     <title>CodeNames | Game</title>
 </head>
 <body>
@@ -21,16 +21,16 @@
             <span class="slider round"></span>
           </label>
         </div>
-    </header>
-    <div id = "nav" class = "navWrapper" style ="text-align: center;">
+      </header>
+      <div id = "nav" class = "navWrapper" style ="text-align: center;">
 
 
         <form action="/game/game.html" method="GET">
           <input type="text" id="gameCode" name="code" required>
           <button type="submit">Join Game</button>
         </form>  
-    </div>
-    <div id = "wordGrid">
+      </div>
+      <div id = "wordGrid">
         <br><p></p>
         <div class = "loading">
             <p >loading...</p>
@@ -38,8 +38,7 @@
         <br><br>
     </div>
     <div id = "nav" class = "navWrapper" style = "text-align: right;">
-        <a id = "solution_button" href="../solution/solution.html">Solution</a>
-        <a href="newgame.html">New Game</a>
+        <a id = "game_button" href="../game/index.html">GAME</a>
     </div>
 
 </body>

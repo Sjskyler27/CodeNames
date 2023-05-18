@@ -20,4 +20,4 @@ colorToggle.addEventListener('change', function() {
   document.body.classList.toggle('dark-mode');
 });
 
-document.getElementById('solution_button').href = `../solution/solution.html?code=${getParam("code")}`;
+document.getElementById('solution_button').href = `../solution/index.html?code=${getParam("code")}`;
