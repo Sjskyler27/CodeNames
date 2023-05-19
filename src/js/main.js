@@ -41,6 +41,7 @@ async function createWords() {
     }
   } catch (error) {
     console.log('Fetch failed:', error);
+    window.alert(error);
   }
 }
 
