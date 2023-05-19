@@ -1,5 +1,5 @@
 import { addToggle, colorHeader, loadHeader } from "./utils";
-
+import jsonList from "../json/words.json";
 (async () => {
   await loadHeader();
   addToggle();
@@ -9,15 +9,18 @@ import { addToggle, colorHeader, loadHeader } from "./utils";
 document.getElementById("new_game").addEventListener("click", createWords);
 
 async function createWords() {
-  // Get word list data
-  const wordListData = await fetch('json/words.json');
-  const wordList = await wordListData.json();
-  console.log("got words");
+  // use import instead
+  // // Get word list data
+  // const wordListData = await fetch('json/words.json');
+  // const wordList = await wordListData.json();
+  // console.log("got words");
+
+
 
   // Set up POST request data
   const postData = {
     type: "Base",
-    wordList: wordList.wordList  // wordList is an array in JSON
+    wordList: jsonList.wordList
   };
 
   try {
