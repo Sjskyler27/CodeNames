@@ -114,3 +114,11 @@ export async function loadHeader(){
     });
   }
   
+export async function upperInput(){
+    const textInput = document.querySelector('.navWrapper input[type="text"]');
+
+    textInput.addEventListener('input', function (event) {
+    this.value = this.value.toUpperCase();
+    });
+
+}

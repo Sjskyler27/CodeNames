@@ -1,4 +1,4 @@
-import { addToggle, colorHeader, loadHeader } from "./utils";
+import { addToggle, colorHeader, loadHeader, upperInput } from "./utils";
 import jsonList from "../json/words.json";
 (async () => {
   await loadHeader();
@@ -48,3 +48,4 @@ async function createWords() {
   }
 }
 
+upperInput();

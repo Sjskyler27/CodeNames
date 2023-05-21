@@ -1,7 +1,7 @@
 import {Solution} from "./solution.js";
 import { ColorChange } from "./colorChange.js";
 import { displayWords } from "./wordTemplate.js";
-import { getParam, insertCode, loadHeader,addToggle, colorHeader } from "./utils.js";
+import { getParam, insertCode, loadHeader,addToggle, colorHeader, upperInput } from "./utils.js";
 
 async function init(){
   await loadHeader();
@@ -14,8 +14,8 @@ async function init(){
     // every once in a while it seems this function gets called before the program is ready
     colorChange.init();
 }
-
 init();
+upperInput();
 
 
 
