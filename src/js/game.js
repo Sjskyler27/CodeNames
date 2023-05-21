@@ -1,7 +1,7 @@
 import {Solution} from "./solution.js";
 import { ColorChange } from "./colorChange.js";
 import { displayWords } from "./wordTemplate.js";
-import { getParam, insertCode, loadHeader,addToggle, colorHeader } from "./utils.js";
+import { getParam, loadHeader,addToggle, createWords } from "./utils.js";
 
 async function init(){
   await loadHeader();
@@ -17,6 +17,6 @@ async function init(){
 
 init();
 
-
-
 document.getElementById('solution_button').href = `../solution/index.html?code=${getParam("code")}`;
+
+document.getElementById("new_game").addEventListener("click", createWords);
