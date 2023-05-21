@@ -25,7 +25,7 @@ export class Solution{
                 this.wordList = this.solution.words;  
             }catch(e){
                 console.log('no good ' +e);
-                window.alert("The database does not seem to be working! But don't worry you can play a few rounds without it. Just use codes 0 - 99 to play some premade maps");
+                window.alert("We were not able to make that game! But don't worry you can play a few rounds without it. Just use codes 0 - 99 to play some premade maps, or check on the list of current games to see if there are any available.");
                 document.getElementById("gameCode").value = "0-99";
             }
         }
