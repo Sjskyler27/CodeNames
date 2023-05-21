@@ -231,6 +231,15 @@ body.dark-mode {
     background-color: #555;
 }
 
+@media only screen and (max-width: 900px) {
+.card {
+    width: auto;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-size: 0.75em;
+}
+}
   
 @media only screen and (max-width: 600px) {
     header {
@@ -256,7 +265,7 @@ body.dark-mode {
         align-items: center;
         align-content: center;
         text-align: center;
-        font-size: 0.75em;
+        font-size: 0.9em;
     }
     .navWrapper input[type="text"] {
         display: inline-block;
