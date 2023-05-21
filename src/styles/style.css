@@ -265,6 +265,7 @@ body.dark-mode {
         padding: 6px 20px;
         margin: 10px;
         font-size: 1.32em;
+        text-transform: uppercase;
     }
     .navWrapper button {
         display: inline-block;
