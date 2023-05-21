@@ -155,7 +155,7 @@ export async function createWords() {
     console.log('Fetch failed:', error);
     window.alert(error);
   }
-  
+}
 export async function upperInput(){
     const textInput = document.querySelector('.navWrapper input[type="text"]');
 
