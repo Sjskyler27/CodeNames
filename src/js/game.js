@@ -1,7 +1,8 @@
 import {Solution} from "./solution.js";
 import { ColorChange } from "./colorChange.js";
 import { displayWords } from "./wordTemplate.js";
-import { getParam, loadHeader,addToggle, createWords } from "./utils.js";
+import { getParam, loadHeader,addToggle, createWords, upperInput } from "./utils.js";
+
 
 async function init(){
   await loadHeader();
@@ -14,8 +15,8 @@ async function init(){
     // every once in a while it seems this function gets called before the program is ready
     colorChange.init();
 }
-
 init();
+upperInput();
 
 document.getElementById('solution_button').href = `../solution/index.html?code=${getParam("code")}`;
 
