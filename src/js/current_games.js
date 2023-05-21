@@ -15,7 +15,8 @@ fetch("https://codenamesdb.onrender.com/getAllCodes")
     data.forEach(code => {
       // Create a new link element
       const link = document.createElement("a");
-      link.href = `http://localhost:5173/game/index.html?code=${code}`;
+      link.href = `https://codenamesdb.onrender.com/${code}`;
+      // link.href = `http://localhost:5173/game/index.html?code=${code}`;
       link.textContent = code;
 
       // Append the link to the container
