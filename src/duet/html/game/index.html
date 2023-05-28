@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/style.css" /> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="module" src="../../js/game.js"></script>
+    <title>Game | CodeNames</title>
+</head>
+<body>
+    <header id = "main_header">
+        
+    </header>
+    <div id = "game_nav_top" class = "navWrapper" style ="text-align: center;">
+
+
+        <form action="/game/index.html" method="GET">
+          <input type="text" id="gameCode" name="code" required>
+          <button type="submit">Join Game</button>
+        </form>  
+    </div>
+    <div id = "wordGrid">
+        <br><p></p>
+        <div class = "loading">
+            <p >loading...</p>
+        </div>
+        <br><br>
+    </div>
+    <div id = "game_nav_bottom" class = "navWrapper" style = "text-align: right;">
+        <a id = "solution_button" href="../solution/index.html">Solution</a>
+        <button id = new_game>New Game</button>
+    </div>
+
+</body>
+</html>
