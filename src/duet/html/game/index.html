@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../styles/style.css" /> 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script type="module" src="../../js/game.js"></script>
-    <title>Game | CodeNames</title>
+    <title>Game | Duet CodeNames</title>
 </head>
 <body>
     <header id = "main_header">
@@ -30,7 +30,14 @@
         </div>
         <br><br>
     </div>
+    <br>
+    <div class="grid-line"></div> <!-- Add the line between the grids -->
+    <div id = "solutionGrid">
+    </div>
     <div id = "game_nav_bottom" class = "navWrapper" style = "text-align: right;">
+        <button id = 'show1'>solution 1</button>
+        <button id = "show2">solution 2</button>
+        <button id = "hide">hide solutions</button>
         <a id = "solution_button" href="../solution/index.html">Solution</a>
         <button id = new_game>New Game</button>
     </div>

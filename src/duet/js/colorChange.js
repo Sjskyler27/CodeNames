@@ -58,37 +58,4 @@ export class ColorChange{
           element.addEventListener('click', () => this.change(id, element)); 
         });
       }
-    //  not neccessary, pass dif solution
-    //   async initPlayer1() {
-    //     await new Promise(resolve => setTimeout(resolve, 500)); // Delay for .5 second to really ensure that everything is ready
-        
-    //     this.solution.player1Solution.Green.forEach(id => {
-    //       let element = document.getElementById(id);
-    //       element.addEventListener('click', () => this.change(id, element)); 
-    //     });
-    //     this.solution.player1Solution.Yellow.forEach(id => {
-    //       let element = document.getElementById(id);
-    //       element.addEventListener('click', () => this.change(id, element)); 
-    //     });
-    //     this.solution.player1Solution.Black.forEach(id => {
-    //       let element = document.getElementById(id);
-    //       element.addEventListener('click', () => this.change(id, element)); 
-    //     });
-    //   }
-    //   async initPlayer2() {
-    //     await new Promise(resolve => setTimeout(resolve, 500)); // Delay for .5 second to really ensure that everything is ready
-        
-    //     this.solution.player2Solution.Green.forEach(id => {
-    //       let element = document.getElementById(id);
-    //       element.addEventListener('click', () => this.change(id, element)); 
-    //     });
-    //     this.solution.player2Solution.Yellow.forEach(id => {
-    //       let element = document.getElementById(id);
-    //       element.addEventListener('click', () => this.change(id, element)); 
-    //     });
-    //     this.solution.player2Solution.Black.forEach(id => {
-    //       let element = document.getElementById(id);
-    //       element.addEventListener('click', () => this.change(id, element)); 
-    //     });
-    //   }
     }

@@ -123,6 +123,21 @@ body.dark-mode {
     margin: 0;
   }
 
+.grid-line {
+    height: 1px;
+    background-color: var(--red);
+    margin: 20px 0;
+}
+
+#solutionGrid {
+    margin-top: auto;
+    margin: auto;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+
 .card {
     height: auto;
     align-items: center;
