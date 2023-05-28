@@ -149,7 +149,7 @@ export async function createWords() {
       // 'data' is the JSON response from the server
       console.log(data);
       // Redirect to /game.html with the code as a parameter
-      window.location.href = `/game/index.html?code=${data.code}`;
+      window.location.href = `../game/index.html?code=${data.code}`;
     }
   } catch (error) {
     console.log('Fetch failed:', error);
