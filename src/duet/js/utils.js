@@ -82,7 +82,7 @@ export function renderWithTemplate(template, parentElement, data, callback, posi
   }
 
 export async function loadHeader(){
-    const headerTemplate = await loadTemplate("../../public/partials/header.html");
+    const headerTemplate = await loadTemplate("/public/partials/header.html");
     const headerElement = document.querySelector("#main_header");
     
     renderWithTemplate(headerTemplate, headerElement);

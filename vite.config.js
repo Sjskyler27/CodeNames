@@ -13,7 +13,7 @@ export default defineConfig({
         solution: resolve(__dirname, "src/solution/index.html"),
         currentgames: resolve(__dirname, "src/currentGames/index.html"),
         instructions: resolve(__dirname, "src/instructions/index.html"),
-        duet_main: resolve(__dirname, "src/duet_home/index.html"),
+        duet_main: resolve(__dirname, "src/duet/html/home/index.html"),
         duet_game: resolve(__dirname, "src/duet/html/game/index.html"),
         duet_solution: resolve(__dirname, "src/duet/html/solution/index.html"),
         duet_currentgames: resolve(__dirname, "src/duet/html/currentGames/index.html"),
