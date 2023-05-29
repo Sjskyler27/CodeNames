@@ -89,7 +89,7 @@ export async function loadHeader(){
     renderWithTemplate(headerTemplate, headerElement);
 
   }
-  catch{
+  catch(e){
     console.log('failed to load header')
   }
 }
