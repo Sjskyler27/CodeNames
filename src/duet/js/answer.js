@@ -4,7 +4,7 @@ import { displayWords } from "./wordTemplate.js";
 import { autoClick, getParam, loadHeader, addToggle, upperInput } from "./utils.js";
 
 async function init(){
-  await loadHeader();
+  //await loadHeader();
   
   addToggle();
     const solution = new Solution();

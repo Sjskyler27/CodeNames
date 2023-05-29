@@ -76,22 +76,24 @@ export function renderWithTemplate(template, parentElement, data, callback, posi
 }
   
   async function loadTemplate(path) {
+    try{
     const res = await fetch(path);
     const template = await res.text();
     return template;
+    }
+    catch(e){
+      console.log('failed to load header')
+    }
   }
 
 export async function loadHeader(){
-  try{
-    const headerTemplate = await loadTemplate("/duet/items/partials/header.html");
+  
+    const headerTemplate = await loadTemplate("/duet/html/header/index.html");
     const headerElement = document.querySelector("#main_header");
     
     renderWithTemplate(headerTemplate, headerElement);
 
-  }
-  catch(e){
-    console.log('failed to load header')
-  }
+  
 }
 
 export async function addToggle() {

@@ -5,7 +5,7 @@ import { getParam, loadHeader,addToggle, createWords, upperInput } from "./utils
 
 
 async function init(){
-  await loadHeader();
+  //await loadHeader();
   addToggle();
     const solution = new Solution();
     await solution.getSolution();
