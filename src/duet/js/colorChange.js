@@ -41,6 +41,33 @@ export class ColorChange{
         }
     }
 
+    // recieve a div and iterate through the items in that div. change the color of the item based on the word inside the element.
+    playerChange(div, player) {
+      const elements = div.getElementsByTagName('div');
+      
+      for (let i = 0; i < elements.length; i++) {
+        const element = elements[i];
+        const id = element.getElementsByTagName('p')[0].innerHTML;
+        console.log(id);
+        console.log (player);
+        
+        if (player.Black.indexOf(id) >= 0) {
+          console.log("changing to black");
+          element.style.backgroundColor = 'black';
+          element.style.color = 'white';
+        } else if (player.Yellow.indexOf(id) >= 0) {
+          console.log("changing to Yellow");
+          element.style.backgroundColor = '#F1D302';
+          element.style.color = 'black';
+        } else if (player.Green.indexOf(id) >= 0) {
+          console.log("changing to Green");
+          element.style.backgroundColor = '#1f8c0a';
+          element.style.color = 'white';
+        }
+      }
+    }
+    
+
     // initialize colorChange event, wait for a card to be clicked
     async init() {
         await new Promise(resolve => setTimeout(resolve, 500)); // Delay for .5 second to really ensure that everything is ready
