@@ -15,8 +15,8 @@ fetch("https://codenamesdb.onrender.com/duet/getAllCodes")
     data.forEach(code => {
       // Create a new link element
       const link = document.createElement("a");
-      // link.href = `https://codenamesbyskyler.netlify.app/duet/html/game/index.html?code=${code}`;
-      link.href = `http://localhost:5173/duet/html/game/index.html?code=${code}`;
+      link.href = `https://codenamesbyskyler.netlify.app/duet/html/game/index.html?code=${code}`;
+      // link.href = `http://localhost:5173/duet/html/game/index.html?code=${code}`;
       link.textContent = code;
 
       // Append the link to the container
