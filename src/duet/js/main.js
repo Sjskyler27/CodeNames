@@ -1,4 +1,4 @@
-import { addToggle, colorHeader, loadHeader, upperInput, createWords, setClick} from "./utils";
+import { addToggle, colorHeader, loadHeader, upperInput, createWords, setClick, va} from "./utils";
 import jsonList from "../json/words.json";
 
 (async () => {

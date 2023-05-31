@@ -171,10 +171,16 @@ export function setClick() {
   });
 }
 
+
+
 export async function upperInput(){
     const textInput = document.querySelector('.navWrapper input[type="text"]');
 
     textInput.addEventListener('input', function (event) {
     this.value = this.value.toUpperCase();
+    if (!/^[a-zA-Z0-9]{0,4}$/.test(this.value)) {
+      alert("Please enter a valid 4-character alphanumeric code.");
+      this.value = this.value.slice(0,-1); //-last letter;
+    }
     });
 }
