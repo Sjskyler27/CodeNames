@@ -28,6 +28,7 @@ document.getElementById("new_game").addEventListener("click", () => {
   createWords();
 });
 
+
 upperInput();
 
 setClick();
