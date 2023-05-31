@@ -2,7 +2,7 @@ import {Solution} from "./solution.js";
 import { ColorChange } from "./colorChange.js";
 import { displayWords } from "./wordTemplate.js";
 import { Counter } from "./counter.js";
-import { getParam, loadHeader,addToggle, createWords, upperInput, setClick } from "./utils.js";
+import { getParam, setLocalStorage, getLocalStorage ,addToggle, createWords, upperInput, setClick } from "./utils.js";
 
 
 async function init(){
@@ -23,8 +23,19 @@ let counter2 = new Counter(2);
 counter1.init(1);
 counter2.init(2);
 
+// make sure that a player is chosen
+setLocalStorage('playerChosen',false);
+
+document.getElementById('wordGrid').addEventListener("click", ()=>{
+  if(getLocalStorage('playerChosen') == false){
+    window.alert('Choose a Player!');
+  }
+});
 // logic for changing player
 async function playerColors(player, element) {
+  // tell that a player has been chosen
+  setLocalStorage('playerChosen',true);
+
   // Change color of button that was clicked to yellow and the other to green
   element.style.backgroundColor = "#F1D302";
   const otherElement = (player === 1) ? document.getElementById("player2") : document.getElementById("player1");
@@ -42,6 +53,8 @@ async function playerColors(player, element) {
 
 
    colorChange.init();
+
+   
 }
 
 const player1Element = document.getElementById("player1");
