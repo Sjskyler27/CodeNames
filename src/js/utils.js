@@ -124,7 +124,7 @@ export async function addToggle() {
 
 
 export async function createWords() {
-  let usedWords = getLocalStorage('usedWords');
+  let usedWords = getLocalStorage('usedWords') || [];
    // Set up POST request data
   const postData = {
     type: "Base",

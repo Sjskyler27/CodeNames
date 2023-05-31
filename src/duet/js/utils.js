@@ -52,8 +52,12 @@ export function setLocalStorage(key, data) {
   localStorage.setItem(key, JSON.stringify(data));
 }
 // clear local storage
-export function clearLocalStorage(key, data) {
-  localStorage.clear();
+export function clearLocalStorage(category) {
+  const storedData = JSON.parse(localStorage.getItem(category));
+
+  if (storedData) {
+    localStorage.removeItem(category);
+  }
 }
 
 export function renderListWithTemplate(templateFn, parentElement, list, position = "afterbegin", clear = false){
@@ -141,16 +145,11 @@ export function setClick() {
 }
 
 export async function createWords() {
-  // use import instead
-  // // Get word list data
-  // const wordListData = await fetch('json/words.json');
-  // const wordList = await wordListData.json();
-  // console.log("got words");
-
-  // Set up POST request data
+  let usedWords = getLocalStorage('usedWords') || [];
+   // Set up POST request data
   const postData = {
     type: "Base",
-    wordList: jsonList.wordList
+    wordList: jsonList.wordList.filter(word => !usedWords.includes(word))
   };
 
   try {
