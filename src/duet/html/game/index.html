@@ -22,15 +22,35 @@
           </label>
       </div> 
     </header>
-    <div id = "game_nav_top" class = "navWrapper" style ="text-align: center;">
-
-
-        <form action="../game/index.html" method="GET">
+    <div id = "game_nav_top" class = "navWrapper" style ="text-align: center; align-content: center;">
+        <form style ="margin: auto;" action="../game/index.html" method="GET">
           <input type="text" id="gameCode" name="code" required>
           <button type="submit">Join Game</button>
         </form>
-        <button id = "player1">Player 1</button>
-        <button id = "player2">Player 2</button>
+        <div class="counter-wrapper">
+            <div class="counter-wrapper">
+                <div class="counter">
+                    <div class="counter-label">Clock</div>
+                    <div class="counter-content">
+                      <button id="decrement1" class="counter-button">-</button>
+                      <div id="counter1" class="counter-value">0</div>
+                      <button id="increment1" class="counter-button">+</button>
+                    </div>
+                </div>
+            </div>
+            <button id="player1">Player 1</button>
+            <button id="player2">Player 2</button>
+            <div class="counter-wrapper">
+                <div class="counter">
+                    <div class="counter-label">Stand</div>
+                    <div class="counter-content">
+                      <button id="decrement2" class="counter-button">-</button>
+                      <div id="counter2" class="counter-value">0</div>
+                      <button id="increment2" class="counter-button">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>          
     </div>
     <div id = "wordGrid">
         <br><p></p>

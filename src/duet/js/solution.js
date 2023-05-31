@@ -1,6 +1,6 @@
 //This module gets the solution from the back end, it is ablt to return the entire solution json, and the list of words.
 import Backup from "../json/backup.json";
-import { insertCode, getParam, colorHeader, setClick } from "./utils";
+import { insertCode, getParam, colorHeader } from "./utils";
 export class Solution{
     constructor(){
         this.solution;
@@ -100,4 +100,3 @@ function convertToJson(res) {
     }
   }
 
-  setClick();

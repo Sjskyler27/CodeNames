@@ -1,6 +1,7 @@
 import {Solution} from "./solution.js";
 import { ColorChange } from "./colorChange.js";
 import { displayWords } from "./wordTemplate.js";
+import { Counter } from "./counter.js";
 import { getParam, loadHeader,addToggle, createWords, upperInput, setClick } from "./utils.js";
 
 
@@ -14,6 +15,13 @@ async function init(){
 init();
 upperInput();
 
+// create the counters
+
+let counter1 = new Counter(1);
+let counter2 = new Counter(2);
+
+counter1.init(1);
+counter2.init(2);
 
 // logic for changing player
 async function playerColors(player, element) {
