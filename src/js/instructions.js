@@ -1,7 +1,9 @@
-import { loadHeader, addToggle, colorHeader } from "./utils";
+import { loadHeader, addToggle, colorHeader, setClick } from "./utils";
 
 (async () => {
     await loadHeader();
     addToggle();
     colorHeader();
   })();
+
+  setClick();

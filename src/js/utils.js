@@ -75,7 +75,7 @@ export function renderWithTemplate(template, parentElement, data, callback, posi
   }
 }
   
-  async function loadTemplate(path) {
+export  async function loadTemplate(path) {
     const res = await fetch(path);
     const template = await res.text();
     return template;
@@ -156,6 +156,21 @@ export async function createWords() {
     window.alert(error);
   }
 }
+
+export function setClick() {
+  const clickableElements = document.querySelectorAll('button, a, .card');
+
+  clickableElements.forEach((element) => {
+    element.classList.add('clickable-element');
+    element.addEventListener('click', (event) => {
+      event.target.classList.add('clicked');
+      setTimeout(() => {
+        event.target.classList.remove('clicked');
+      }, 200);
+    });
+  });
+}
+
 export async function upperInput(){
     const textInput = document.querySelector('.navWrapper input[type="text"]');
 

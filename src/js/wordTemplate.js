@@ -4,7 +4,7 @@ function gridTemplate(wordList){
   // Iterate over each word in the wordList
     for (const word of wordList) {
     // Generate the HTML for each word and append it to the template string
-    template += `<div id = "${word}" class ="card"><p>${word}</p></div>`;
+    template += `<div id = "${word}" class = "clickable-element card"  class = "clickable-element" ><p>${word}</p></div>`;
   }
 
     return template; // Return the completed HTML template

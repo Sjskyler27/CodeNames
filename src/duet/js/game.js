@@ -1,7 +1,7 @@
 import {Solution} from "./solution.js";
 import { ColorChange } from "./colorChange.js";
 import { displayWords } from "./wordTemplate.js";
-import { getParam, loadHeader,addToggle, createWords, upperInput } from "./utils.js";
+import { getParam, loadHeader,addToggle, createWords, upperInput, setClick } from "./utils.js";
 
 
 async function init(){
@@ -17,6 +17,11 @@ upperInput();
 
 // logic for changing player
 async function playerColors(player, element) {
+  // Change color of button that was clicked to yellow and the other to green
+  element.style.backgroundColor = "#F1D302";
+  const otherElement = (player === 1) ? document.getElementById("player2") : document.getElementById("player1");
+  otherElement.style.backgroundColor = "#1f8c0a";
+  
   const solution = new Solution();
   await solution.getSolution();
 
@@ -27,10 +32,6 @@ async function playerColors(player, element) {
     colorChange = new ColorChange(solution.returnSolution().player2Solution, solution.returnList());
   }
 
-   // Change color of button that was clicked to yellow and the other to green
-   element.style.backgroundColor = "#F1D302";
-   const otherElement = (player === 1) ? document.getElementById("player2") : document.getElementById("player1");
-   otherElement.style.backgroundColor = "#1f8c0a";
 
    colorChange.init();
 }
@@ -74,3 +75,5 @@ hideElement.addEventListener("click", async function() {document.getElementById(
 document.getElementById('solution_button').href = `../solution/index.html?code=${getParam("code")}`;
 
 document.getElementById("new_game").addEventListener("click", createWords);
+
+setClick();

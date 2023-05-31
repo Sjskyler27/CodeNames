@@ -10,7 +10,8 @@ fetch("https://codenamesdb.onrender.com/duet/getAllCodes")
   .then(data => {
     // Get the container element where the links will be inserted
     const currentGamesContainer = document.getElementById("current_games");
-
+    
+    currentGamesContainer.innerHTML='';
     // Iterate over the array of codes and create a link for each code
     data.forEach(code => {
       // Create a new link element

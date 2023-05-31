@@ -126,6 +126,19 @@ export async function addToggle() {
     });
 }
 
+export function setClick() {
+  const clickableElements = document.querySelectorAll('button, a, .card');
+
+  clickableElements.forEach((element) => {
+    element.classList.add('clickable-element');
+    element.addEventListener('click', (event) => {
+      event.target.classList.add('clicked');
+      setTimeout(() => {
+        event.target.classList.remove('clicked');
+      }, 200);
+    });
+  });
+}
 
 export async function createWords() {
   // use import instead
