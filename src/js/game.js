@@ -1,7 +1,7 @@
 import {Solution} from "./solution.js";
 import { ColorChange } from "./colorChange.js";
 import { displayWords } from "./wordTemplate.js";
-import { getParam, loadHeader,addToggle, createWords, upperInput } from "./utils.js";
+import { getParam, loadHeader,addToggle, createWords, upperInput, setClick } from "./utils.js";
 
 
 async function init(){
@@ -21,3 +21,5 @@ upperInput();
 document.getElementById('solution_button').href = `../solution/index.html?code=${getParam("code")}`;
 
 document.getElementById("new_game").addEventListener("click", createWords);
+
+setClick();
