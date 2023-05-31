@@ -52,8 +52,12 @@ export function setLocalStorage(key, data) {
   localStorage.setItem(key, JSON.stringify(data));
 }
 // clear local storage
-export function clearLocalStorage(key, data) {
-  localStorage.clear();
+export function clearLocalStorage(category) {
+  const storedData = JSON.parse(localStorage.getItem(category));
+
+  if (storedData) {
+    localStorage.removeItem(category);
+  }
 }
 
 export function renderListWithTemplate(templateFn, parentElement, list, position = "afterbegin", clear = false){
@@ -120,16 +124,11 @@ export async function addToggle() {
 
 
 export async function createWords() {
-  // use import instead
-  // // Get word list data
-  // const wordListData = await fetch('json/words.json');
-  // const wordList = await wordListData.json();
-  // console.log("got words");
-
-  // Set up POST request data
+  let usedWords = getLocalStorage('usedWords');
+   // Set up POST request data
   const postData = {
     type: "Base",
-    wordList: jsonList.wordList
+    wordList: jsonList.wordList.filter(word => !usedWords.includes(word))
   };
 
   try {
@@ -146,11 +145,10 @@ export async function createWords() {
     } else {
       const data = await response.json();
 
-      // 'data' is the JSON response from the server
-      console.log(data);
       // Redirect to /game.html with the code as a parameter
       window.location.href = `/game/index.html?code=${data.code}`;
     }
+    
   } catch (error) {
     console.log('Fetch failed:', error);
     window.alert(error);
