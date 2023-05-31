@@ -248,6 +248,64 @@ body.dark-mode {
     border-color: var(--green);
     cursor: url('/images/cursor3.png'), pointer;
 }
+
+/* counter buttons */
+.counter-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    font-family: 'Staatliches', sans-serif;
+    font-weight:600;
+    text-align: center;
+  }
+  .counter {
+    text-align: center;
+    flex-basis: 50%;
+    margin-bottom: 20px;
+    
+  }
+  .counter-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+
+  .counter-label {
+    font-size: 40px;
+    color: var(--green);
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .counter-value {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--green);
+  }
+  
+  button.counter-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: var(--yellow);
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  
+
 .instructions {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
@@ -340,11 +398,46 @@ body.dark-mode {
         display: inline-block;
         height: auto;
         padding: 10px 20px;
-        margin: 10px;
+        margin: 2px;
         font-size: 1.22em;
     }
     .navWrapper #home_nav {
         text-align: center;
     }
+
+    .counter-wrapper {
+        gap: 1px;
+        font-size: 0.9em;
+      }
+      
+ 
+      .counter-label {
+            
+        width: 100%;
+        text-align: center;
+        font-size: 1em;
+      }
+      
+      .counter-value {
+        font-size: 1.5em;
+        color: var(--green);
+      }
+      
+      button.counter-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1em;
+        height: 1em;
+        border: none;
+        background-color: var(--yellow);
+        color: black;
+        font-size: 1em;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+
     }
     

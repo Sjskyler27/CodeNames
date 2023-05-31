@@ -1,7 +1,7 @@
 import {Solution} from "./solution.js";
 import { ColorChange } from "./colorChange.js";
 import { displayWords } from "./wordTemplate.js";
-import { autoClick, getParam, loadHeader, addToggle, upperInput } from "./utils.js";
+import { autoClick, getParam, loadHeader, addToggle, upperInput, setClick } from "./utils.js";
 
 async function init(){
   //await loadHeader();
@@ -20,3 +20,4 @@ init();
 upperInput();
 document.getElementById('game_button').href = `../game/index.html?code=${getParam("code")}`;
 
+setClick();
