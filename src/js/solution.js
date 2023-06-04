@@ -12,7 +12,7 @@ export class Solution{
         console.log("Getting solution...");
         const code = getParam("code");
         insertCode(code);
-        if (code<100){
+        if (code<1000){
             this.solution = Backup[code];
             this.wordList = this.solution.words;
         }else{
@@ -26,7 +26,7 @@ export class Solution{
             }catch(e){
                 console.log('no good ' +e);
                 window.alert("We were not able to make that game! But don't worry you can play a few rounds without it. Just use codes 0 - 99 to play some premade maps, or check on the list of current games to see if there are any available.");
-                document.getElementById("gameCode").value = "0-99";
+                document.getElementById("gameCode").value = "0-999";
             }
         }
         colorHeader(this.solution.firstPlayer);
