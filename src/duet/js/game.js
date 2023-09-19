@@ -42,13 +42,6 @@ document.getElementById('wordGrid').addEventListener('click', () => {
 async function playerColors(player, element) {
   // tell that a player has been chosen
   setLocalStorage('playerChosen', true);
-  // Change color of button that was clicked to yellow and the other to green
-  element.style.backgroundColor = '#F1D302';
-  const otherElement =
-    player === 1
-      ? document.getElementById('player2')
-      : document.getElementById('player1');
-  otherElement.style.backgroundColor = '#1f8c0a';
 
   const solution = new Solution();
   await solution.getSolution();
@@ -65,6 +58,13 @@ async function playerColors(player, element) {
       solution.returnList()
     );
   }
+  // Change color of button that was clicked to yellow and the other to green
+  element.style.backgroundColor = '#F1D302';
+  const otherElement =
+    player === 1
+      ? document.getElementById('player2')
+      : document.getElementById('player1');
+  otherElement.style.backgroundColor = '#1f8c0a';
 
   colorChange.init();
 }
