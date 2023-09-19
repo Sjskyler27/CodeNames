@@ -15,6 +15,7 @@ export class Solution {
     if (code < 1000) {
       this.solution = Backup[code];
       this.wordList = this.solution.words;
+      console.log('aquired backup');
     } else {
       try {
         const response = await fetch(
