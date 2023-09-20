@@ -138,7 +138,19 @@ export async function createWords() {
     wordList: jsonList.wordList.filter((word) => !usedWords.includes(word)),
   };
 
+  //OG try catch
   try {
+    console.log('starting timer');
+    // Set a timeout for 5 seconds
+    const timeoutPromise = new Promise((_, reject) => {
+      setTimeout(() => {
+        const randomGame = Math.floor(Math.random() * 1000);
+        window.location.href = `/game/index.html?code=${randomGame}`;
+        console.log('Timeout: The request took too long to complete.');
+        reject(new Error('Timeout: The request took too long to complete.'));
+      }, 4000); // 5 seconds in milliseconds
+    });
+
     const response = await fetch(
       'https://codenamesdb.onrender.com/createFromWords', // fix typo when done testing
       {
@@ -163,6 +175,49 @@ export async function createWords() {
     const randomGame = Math.floor(Math.random() * 1000);
     window.location.href = `/game/index.html?code=${randomGame}`;
   }
+
+  // //response timout try catch
+  // try {
+  //   console.log('starting timer');
+  //   // Set a timeout for 10 seconds
+  //   const timeoutPromise = new Promise((_, reject) => {
+  //     setTimeout(() => {
+  //       const randomGame = Math.floor(Math.random() * 1000);
+  //       window.location.href = `/game/index.html?code=${randomGame}`;
+  //       console.log('Timeout: The request took too long to complete.');
+  //       reject(new Error('Timeout: The request took too long to complete.'));
+  //     }, 30000); // 10 seconds in milliseconds
+  //   });
+
+  //   console.log('getting response');
+  //   // Start the fetch operation without waiting for it
+  //   const responsePromise = await fetch(
+  //     'https://codenamesdb.onrender.com/createFromWords',
+  //     {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify(postData),
+  //     }
+  //   );
+
+  //   // Continue with processing the response
+  //   console.log('getting data promise');
+  //   const data = await responsePromise.json();
+
+  //   if (data) {
+  //     // Redirect to /game.html with the code as a parameter
+  //     window.location.href = `/game/index.html?code=${data.code}`;
+  //   } else {
+  //     // Handle the case where data is not populated after 5 seconds
+  //     throw new Error('Data not populated after 5 seconds.');
+  //   }
+  // } catch (error) {
+  //   console.log('Fetch failed:', error);
+  //   const randomGame = Math.floor(Math.random() * 1000);
+  //   window.location.href = `/game/index.html?code=${randomGame}`;
+  // }
 }
 
 export function setClick() {

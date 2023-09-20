@@ -157,6 +157,17 @@ export async function createWords() {
   };
 
   try {
+    console.log('starting timer');
+    // Set a timeout for 5 seconds
+    const timeoutPromise = new Promise((_, reject) => {
+      setTimeout(() => {
+        const randomGame = Math.floor(Math.random() * 1000);
+        window.location.href = `/duet/html/game/index.html?code=${randomGame}`;
+        console.log('Timeout: The request took too long to complete.');
+        reject(new Error('Timeout: The request took too long to complete.'));
+      }, 4000); // 5 seconds in milliseconds
+    });
+
     const response = await fetch(
       'https://codenamesdb.onrender.com/duet/createFromWords',
       {
