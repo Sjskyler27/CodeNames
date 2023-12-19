@@ -29,6 +29,10 @@ header {
   display: flex;
   align-items: center;
 }
+.duet-map {
+  width: 90vw;
+  padding-left: 40px;
+}
 
 .home-button {
   display: flex;
